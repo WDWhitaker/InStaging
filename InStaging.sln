@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 Domain", "01 Domain", "{46DF26D6-106F-4B73-BA0B-AD33442CF07E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 Services", "02 Services", "{EC143D77-6F27-4FEF-8CD3-5B5199984F4D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 Logic", "03 Logic", "{4D9F783A-EADF-4827-AD89-E2D5B01BB57D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 Apps", "04 Apps", "{4EA79EDC-10A6-4C53-95A7-9CC39B393786}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InStaging.Domain", "InStaging.Domain\InStaging.Domain.csproj", "{E661BE04-FFEE-40FC-ABB0-D86B3F45F7D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InStaging.Logic", "InStaging.Logic\InStaging.Logic.csproj", "{4D450F55-9F73-433F-94F8-0E469D316F54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InStaging.SqlDataService", "InStaging.SqlDataService\InStaging.SqlDataService.csproj", "{62ABB488-1388-4A73-8A35-B227173D61AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E661BE04-FFEE-40FC-ABB0-D86B3F45F7D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E661BE04-FFEE-40FC-ABB0-D86B3F45F7D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E661BE04-FFEE-40FC-ABB0-D86B3F45F7D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E661BE04-FFEE-40FC-ABB0-D86B3F45F7D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D450F55-9F73-433F-94F8-0E469D316F54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D450F55-9F73-433F-94F8-0E469D316F54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D450F55-9F73-433F-94F8-0E469D316F54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D450F55-9F73-433F-94F8-0E469D316F54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62ABB488-1388-4A73-8A35-B227173D61AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62ABB488-1388-4A73-8A35-B227173D61AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62ABB488-1388-4A73-8A35-B227173D61AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62ABB488-1388-4A73-8A35-B227173D61AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E661BE04-FFEE-40FC-ABB0-D86B3F45F7D4} = {46DF26D6-106F-4B73-BA0B-AD33442CF07E}
+		{4D450F55-9F73-433F-94F8-0E469D316F54} = {4D9F783A-EADF-4827-AD89-E2D5B01BB57D}
+		{62ABB488-1388-4A73-8A35-B227173D61AD} = {EC143D77-6F27-4FEF-8CD3-5B5199984F4D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {601590EB-937A-4CDE-AF56-03B7AA468D7C}
+	EndGlobalSection
+EndGlobal
