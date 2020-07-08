@@ -12,7 +12,7 @@ namespace InStaging.Domain.DataObjects
         public Guid AppId { get; set; }
         public string UrlString { get; set; }
         
-        public virtual ICollection<AppLink> AppLinks { get; set; }
+        public ICollection<AppLink> AppLinks { get; set; }
 
 
     }

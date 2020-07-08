@@ -9,6 +9,9 @@ namespace InStaging.Domain.DataObjects
         public Guid Id { get; set; }
         public bool Archived { get; set; }
 
-        public virtual ICollection<Comment> Comments { get; set; }
+        public  ICollection<Comment> Comments { get; set; }
+
+        public  ICollection<UserApplication> UserApplications { get; set; }
+        public  ICollection<Ticket> AssignedTickets { get; set; }
     }
 }

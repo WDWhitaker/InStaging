@@ -10,10 +10,13 @@ namespace InStaging.Domain.DataObjects
         public bool Archived { get; set; }
 
         public Guid UserId { get; set; }
-        public virtual User User { get; set; }
+        public  User User { get; set; }
 
         public string Message { get; set; }
 
-        public virtual ICollection<CommentFile> CommentFiles { get; set; }
+        public ICollection<CommentFile> CommentFiles { get; set; }
+
+        public Guid TicketId { get; set; }
+        public Ticket Ticket { get; set; }
     }
 }

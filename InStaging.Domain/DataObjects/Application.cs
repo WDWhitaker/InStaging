@@ -9,5 +9,6 @@ namespace InStaging.Domain.DataObjects
         public Guid Id { get; set; }
         public bool Archived { get; set; }
         public string Name { get; set; }
+        public ICollection<UserApplication> UserApplications { get; set; }
     }
 }

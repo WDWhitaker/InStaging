@@ -15,7 +15,11 @@ namespace InStaging.Domain.DataObjects
         public Enums.TicketStatus Status { get; set; }
         public Enums.TicketType Type { get; set; }
 
-        public virtual ICollection<Comment> Comments { get; set; }
+        public  ICollection<Comment> Comments { get; set; }
+
+
+        public Guid? AssignedUserId { get; set; }
+        public User AssignedUser { get; set; }
 
 
     }
