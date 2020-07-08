@@ -4,7 +4,7 @@ using System.Text;
 
 namespace InStaging.Domain.DataObjects
 {
-    public class AppLink : Interfaces.IDataObject
+    public class AppLink 
     {
         public Guid Id { get; set; }
         public bool Archived { get; set; }

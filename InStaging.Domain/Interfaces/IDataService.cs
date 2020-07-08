@@ -4,9 +4,7 @@ using System.Text;
 
 namespace InStaging.Domain.Interfaces
 {
-    public interface IDataObject
+    public interface IDataService
     {
-        public Guid Id { get; set; }
-        public bool Archived { get; set; }
     }
 }

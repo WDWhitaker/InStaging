@@ -4,7 +4,7 @@ using System.Text;
 
 namespace InStaging.Domain.DataObjects
 {
-    public class File : Interfaces.IDataObject
+    public class File 
     {
         public Guid Id { get ; set ; }
         public bool Archived { get ; set ; }

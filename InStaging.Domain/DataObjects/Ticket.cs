@@ -4,7 +4,7 @@ using System.Text;
 
 namespace InStaging.Domain.DataObjects
 {
-    public class Ticket : Interfaces.IDataObject
+    public class Ticket 
     {
         public Guid Id { get; set; }
         public bool Archived { get; set; }

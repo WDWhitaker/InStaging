@@ -11,11 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 Logic", "03 Logic", "{4D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 Apps", "04 Apps", "{4EA79EDC-10A6-4C53-95A7-9CC39B393786}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InStaging.Domain", "InStaging.Domain\InStaging.Domain.csproj", "{E661BE04-FFEE-40FC-ABB0-D86B3F45F7D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InStaging.Domain", "InStaging.Domain\InStaging.Domain.csproj", "{E661BE04-FFEE-40FC-ABB0-D86B3F45F7D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InStaging.Logic", "InStaging.Logic\InStaging.Logic.csproj", "{4D450F55-9F73-433F-94F8-0E469D316F54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InStaging.Logic", "InStaging.Logic\InStaging.Logic.csproj", "{4D450F55-9F73-433F-94F8-0E469D316F54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InStaging.SqlDataService", "InStaging.SqlDataService\InStaging.SqlDataService.csproj", "{62ABB488-1388-4A73-8A35-B227173D61AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InStaging.SqlDataService", "InStaging.SqlDataService\InStaging.SqlDataService.csproj", "{62ABB488-1388-4A73-8A35-B227173D61AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InStaging.MvcApp", "InStaging.MvcApp\InStaging.MvcApp.csproj", "{04BAF334-6FD3-47B3-A032-5972D5C67343}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{62ABB488-1388-4A73-8A35-B227173D61AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62ABB488-1388-4A73-8A35-B227173D61AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62ABB488-1388-4A73-8A35-B227173D61AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04BAF334-6FD3-47B3-A032-5972D5C67343}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04BAF334-6FD3-47B3-A032-5972D5C67343}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04BAF334-6FD3-47B3-A032-5972D5C67343}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04BAF334-6FD3-47B3-A032-5972D5C67343}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +49,7 @@ Global
 		{E661BE04-FFEE-40FC-ABB0-D86B3F45F7D4} = {46DF26D6-106F-4B73-BA0B-AD33442CF07E}
 		{4D450F55-9F73-433F-94F8-0E469D316F54} = {4D9F783A-EADF-4827-AD89-E2D5B01BB57D}
 		{62ABB488-1388-4A73-8A35-B227173D61AD} = {EC143D77-6F27-4FEF-8CD3-5B5199984F4D}
+		{04BAF334-6FD3-47B3-A032-5972D5C67343} = {4EA79EDC-10A6-4C53-95A7-9CC39B393786}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {601590EB-937A-4CDE-AF56-03B7AA468D7C}

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace InStaging.Domain.DataObjects
 {
-    public class Application : Interfaces.IDataObject
+    public class Application 
     {
         public Guid Id { get; set; }
         public bool Archived { get; set; }

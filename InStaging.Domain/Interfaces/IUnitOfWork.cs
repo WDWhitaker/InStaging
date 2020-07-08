@@ -4,7 +4,8 @@ using System.Text;
 
 namespace InStaging.Domain.Interfaces
 {
-    interface IUnitOfWork
+    public interface IUnitOfWork
     {
+        public IDataService DataService { get; set; }
     }
 }

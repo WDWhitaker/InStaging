@@ -1,20 +1,25 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\InStaging.Domain\InStaging.Domain.csproj" />
+    <ProjectReference Include="..\InStaging.Logic\InStaging.Logic.csproj" />
+    <ProjectReference Include="..\InStaging.SqlDataService\InStaging.SqlDataService.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\Api\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.5" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.5">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\InStaging.Domain\InStaging.Domain.csproj" />
   </ItemGroup>
 
 </Project>
