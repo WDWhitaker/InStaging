@@ -5,10 +5,12 @@ using System.Text;
 
 namespace InStaging.Logic
 {
-    public class ChangeRequestLogic : BaseLogic
+    public abstract class BaseLogic
     {
-        public ChangeRequestLogic(IUnitOfWork uow) : base(uow)
+        internal IUnitOfWork Uow { get; set; }
+        public BaseLogic(IUnitOfWork uow)
         {
+            Uow = uow;
         }
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace InStaging.Domain.DataObjects
+namespace InStaging.Domain
 {
     public class AppLink 
     {

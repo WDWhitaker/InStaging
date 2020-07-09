@@ -1,4 +1,4 @@
-﻿using InStaging.Domain.DataObjects;
+﻿using InStaging.Domain;
 using InStaging.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
