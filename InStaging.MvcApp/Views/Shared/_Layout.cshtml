@@ -1,48 +1,48 @@
-﻿<!DOCTYPE html>
+﻿@using InStaging.MvcApp.Helper 
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - InStaging.MvcApp</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <title>InStaging</title>
+    <link href="~/styles/font-awesome.css" rel="stylesheet" />
+    <link href="~/styles/bootstrap.css" rel="stylesheet" />
+    <link href="~/styles/all.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">InStaging.MvcApp</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+
+    <div class="layout-container">
+        <div class="layout-sidebar">
+            <a class="sidebar-logo"><img /></a>
+            <ul>
+                <li class=""><a href="">User Profile</a></li>
+            </ul>
+            <hr />
+            <ul>
+                <li class="@RazorHelper.GetActiveString(ViewBag.ActiveNav, "Inbox")"><a href="">Inbox</a></li>
+                <li class="@RazorHelper.GetActiveString(ViewBag.ActiveNav, "Tickets")"><a href="">Tickets</a></li>
+                <li class="">
+                    <a>Admin</a>
+                    <ul>
+                        <li><a href="@RazorHelper.GetActiveString(ViewBag.ActiveNav, "Settings")">Settings</a></li>
+                        <li><a href="@RazorHelper.GetActiveString(ViewBag.ActiveNav, "Other Settings")">Other Settings</a></li>
                     </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+                </li>
+
+            </ul>
+            <hr />
+            <ul>
+                <li><a href="">Log Out</a></li>
+            </ul>
+        </div>
+        <div class="layout-content">
             @RenderBody()
-        </main>
+        </div>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - InStaging.MvcApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/libraries/jquery/dist/jquery.js"></script>
+    <script src="~/libraries/bootstrap/dist/js/bootstrap.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using InStaging.Domain.Interfaces;
-using InStaging.MvcApp.Models.Ticket;
+using InStaging.Logic;
+using InStaging.MvcApp.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InStaging.MvcApp.Controllers
@@ -16,18 +17,21 @@ namespace InStaging.MvcApp.Controllers
 
         public IActionResult Index()
         {
-            //var ticketLogic = new TicketLogic(Uow).
+            var model = new TicketIndexVM();
+
+            var ticketLogic = new TicketLogic(Uow);
+            var activeTickets = ticketLogic.GetActiveTickets();
             return View();
         }
 
         [HttpGet]
         public IActionResult Add()
         {
-            var model = new AddViewModel();
+            var model = new TicketAddVM();
             return View(model);
         }
         [HttpPost]
-        public IActionResult Add(AddViewModel model)
+        public IActionResult Add(TicketAddVM model)
         {
             return View(model);
         }
@@ -35,12 +39,12 @@ namespace InStaging.MvcApp.Controllers
         [HttpGet]
         public IActionResult Edit()
         {
-            var model = new EditViewModel();
+            var model = new TicketEditVM();
             return View(model);
         }
 
         [HttpPost]
-        public IActionResult Edit(EditViewModel model)
+        public IActionResult Edit(TicketEditVM model)
         {
             return View(model);
         }

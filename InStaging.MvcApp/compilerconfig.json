@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "wwwroot/styles/all.css",
+    "inputFile": "wwwroot/styles/sass/all.scss"
+  },
+  {
+    "outputFile": "wwwroot/styles/bootstrap.css",
+    "inputFile": "wwwroot/libraries/bootstrap/scss/bootstrap.scss"
+  },
+  {
+    "outputFile": "wwwroot/styles/font-awesome.css",
+    "inputFile": "wwwroot/libraries/font-awesome/scss/font-awesome.scss"
+  }
+]

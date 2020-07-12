@@ -1,0 +1,87 @@
+﻿@import "variables";
+
+$sidebar-width: 270px;
+$sidebar-bg: $primary;
+$sidebar-color: white;
+$sidebar-active-bg: white;
+$sidebar-active-color: $secondary;
+$sidebar-border-color: rgba(0, 0, 0, 0.1);
+$bodycolor: $gray-500;
+
+body {
+    background-color: $bodycolor;
+    height: 100%;
+}
+
+.layout-container {
+
+    .layout-content {
+        margin-left: $sidebar-width;
+        padding: 15px;
+    }
+
+    .layout-sidebar {
+        display: inline-block;
+        width: $sidebar-width;
+        position: fixed;
+        height: 100%;
+        background-color: $sidebar-bg;
+
+        hr {
+            margin: 8px 16px;
+            border-top: 1px solid $sidebar-color;
+            color: $sidebar-color;
+        }
+
+        ul {
+            padding: 0px;
+            margin-bottom: 0px;
+
+            li {
+                color: $sidebar-color;
+
+                a {
+                    padding-left: 16px;
+                    background-color: $sidebar-bg;
+                    border-bottom: solid 1px $sidebar-border-color;
+                }
+
+                li a {
+                    padding-left: 32px;
+                    background-color: lighten($sidebar-bg,5);
+                }
+
+                li li a {
+                    padding-left: 40px;
+                    background-color: lighten($sidebar-bg,5);
+                }
+
+                a {
+                    padding: 8px;
+                    display: block;
+                    color: $sidebar-color;
+
+                    &:hover {
+                        text-decoration: none;
+                        background-color: darken($sidebar-bg,10);
+                    }
+                }
+
+                list-style: none;
+
+                &.active {
+
+                    a {
+                        color: $sidebar-active-color;
+                        background: $sidebar-active-bg;
+
+                        &:hover {
+                            text-decoration: none;
+                            background-color: darken($sidebar-active-bg,10);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

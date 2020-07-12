@@ -26,8 +26,8 @@ namespace InStaging.MvcApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            //services.AddMvc();
-            services.AddSingleton<IUnitOfWork, MvcUnitOfWork>();
+            // TODO figure out if ths can/needs to be singleton. also confirm if datacontext ncan/needs to be singleton.
+            services.AddScoped<IUnitOfWork, MvcUnitOfWork>();
 
             services.AddDbContext<SqlDataService.SqlDataContext>(item => item.UseSqlServer(Configuration.GetConnectionString("InStagingDB")));
         }
@@ -57,7 +57,7 @@ namespace InStaging.MvcApp
             {
                 endpoints.MapControllerRoute(
                    name: "api",
-                   pattern: "api/{controller=Home}/{action=Index}/{id?}");
+                   pattern: "api/{controller=Home}/{action=}/{id?}");
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

@@ -12,7 +12,7 @@ namespace InStaging.MvcApp.Controllers
         internal IUnitOfWork Uow { get; set; }
         public BaseController(IUnitOfWork uow)
         {
-            Uow = new MvcUnitOfWork();
+            Uow = uow;
         }
     }
 }

@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InStaging.Logic", "InStagin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InStaging.SqlDataService", "InStaging.SqlDataService\InStaging.SqlDataService.csproj", "{62ABB488-1388-4A73-8A35-B227173D61AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InStaging.MvcApp", "InStaging.MvcApp\InStaging.MvcApp.csproj", "{04BAF334-6FD3-47B3-A032-5972D5C67343}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InStaging.MvcApp", "InStaging.MvcApp\InStaging.MvcApp.csproj", "{04BAF334-6FD3-47B3-A032-5972D5C67343}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
