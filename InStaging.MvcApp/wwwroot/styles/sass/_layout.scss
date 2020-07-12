@@ -1,12 +1,12 @@
-﻿@import "variables";
+﻿@import "_variables";
 
 $sidebar-width: 270px;
-$sidebar-bg: $primary;
+$sidebar-bg: $gray-700;
 $sidebar-color: white;
-$sidebar-active-bg: white;
-$sidebar-active-color: $secondary;
+$sidebar-active-bg: $purple;
+$sidebar-active-color: white;
 $sidebar-border-color: rgba(0, 0, 0, 0.1);
-$bodycolor: $gray-500;
+$bodycolor: $gray-300;
 
 body {
     background-color: $bodycolor;
@@ -15,9 +15,23 @@ body {
 
 .layout-container {
 
+    .layout-footer {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        z-index: 1;
+        color: black;
+        opacity: 0.5;
+        padding: 8px;
+        padding-left: $sidebar-width + 8px;
+        font-size: 12px;
+        text-align: center;
+    }
+
     .layout-content {
+        position: relative;
         margin-left: $sidebar-width;
-        padding: 15px;
+        z-index: 2;
     }
 
     .layout-sidebar {
@@ -36,6 +50,7 @@ body {
         ul {
             padding: 0px;
             margin-bottom: 0px;
+            list-style: none;
 
             li {
                 color: $sidebar-color;
@@ -44,7 +59,17 @@ body {
                     padding-left: 16px;
                     background-color: $sidebar-bg;
                     border-bottom: solid 1px $sidebar-border-color;
+                    padding: 6px;
+                    display: block;
+                    color: $sidebar-color;
+
+                    &:hover {
+                        text-decoration: none;
+                        background-color: darken($sidebar-bg,10);
+                    }
                 }
+
+
 
                 li a {
                     padding-left: 32px;
@@ -56,18 +81,6 @@ body {
                     background-color: lighten($sidebar-bg,5);
                 }
 
-                a {
-                    padding: 8px;
-                    display: block;
-                    color: $sidebar-color;
-
-                    &:hover {
-                        text-decoration: none;
-                        background-color: darken($sidebar-bg,10);
-                    }
-                }
-
-                list-style: none;
 
                 &.active {
 

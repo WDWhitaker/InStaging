@@ -120,7 +120,7 @@
     <None Include="wwwroot\libraries\bootstrap\scss\_utilities.scss" />
     <None Include="wwwroot\libraries\bootstrap\scss\_variables.scss" />
     <None Include="wwwroot\styles\sass\all.scss" />
-    <None Include="wwwroot\styles\sass\layout.scss" />
+    <None Include="wwwroot\styles\sass\_layout.scss" />
   </ItemGroup>
 
   <ItemGroup>
