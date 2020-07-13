@@ -1,7 +1,7 @@
-﻿@model InStaging.MvcApp.Models.TicketIndexVM
+﻿@model InStaging.MvcApp.Models.ApplicationIndexVM
 @{
-    ViewData["ActiveNav"] = "Tickets";
-    ViewData["Title"] = "Tickets";
+    ViewData["ActiveNav"] = "Applications";
+    ViewData["Title"] = "Applications";
 }
 @section navbar{
 
@@ -9,26 +9,23 @@
 <div class="panel">
     <div class="navbar">
         <div class="ml-auto">
-            <button class="btn btn-sm btn-outline-info">Board</button>
-            <a href="@Url.Action("Add", "Ticket")" class="btn btn-sm btn-outline-primary">Create Ticket</a>
+            <a href="@Url.Action("Add", "Application")" class="btn btn-sm btn-outline-primary">Create</a>
         </div>
     </div>
     <table class="table">
         <thead>
             <tr>
-                <th>Date</th>
                 <th>Details</th>
                 <th style="width:80px;" class="text-center">Actions</th>
             </tr>
         </thead>
         <tbody>
-            @if (Model.ActiveTickets.Any())
+            @if (Model.Applications.Any())
             {
-                foreach (var item in Model.ActiveTickets)
+                foreach (var item in Model.Applications)
                 {
                     <tr>
-                        <td>@item.DateCreated.ToShortDateString()</td>
-                        <td>@item.Title</td>
+                        <td>@item.Name</td>
                         <td class="text-center"><a class="btn btn-sm btn-outline-primary" href="@Url.Action("Edit", "Ticket")">View</a></td>
                     </tr>
                 }

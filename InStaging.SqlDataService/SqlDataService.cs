@@ -14,7 +14,8 @@ namespace InStaging.SqlDataService
         {
             db = dbContext;
         }
-        public IQueryable<Ticket> Tickets { get => db.Ticket.AsQueryable(); }
+        public IDataRepository<Ticket> Tickets { get => new SqlDataRepository<Ticket>(db); }
+        public IDataRepository<Application> Applications { get => new SqlDataRepository<Application>(db); }
 
 
         public int SaveChanges()

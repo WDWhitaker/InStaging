@@ -10,5 +10,6 @@ namespace InStaging.Domain
         public bool Archived { get; set; }
         public string Name { get; set; }
         public ICollection<UserApplication> UserApplications { get; set; }
+        public DateTime DateCreated { get; set; }
     }
 }

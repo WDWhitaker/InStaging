@@ -56,11 +56,12 @@ namespace InStaging.MvcApp
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-                   name: "api",
-                   pattern: "api/{controller=Home}/{action=}/{id?}");
-                endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(
+                   name: "api",
+                   pattern: "api/{controller=Home}/{action=}/{id?}");
+
             });
         }
     }

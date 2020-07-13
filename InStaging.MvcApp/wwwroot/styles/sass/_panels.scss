@@ -1,7 +1,10 @@
 ﻿@import "variables";
 
 
-.panel{
-    background-color:white;
-    padding:15px;
+.panel {
+    background-color: white;
+    padding: 15px;
+    .panel-row{
+        padding:0px 8px;
+    }
 }

@@ -1,0 +1,35 @@
+﻿@model InStaging.MvcApp.Models.TicketAddVM
+
+@{
+    ViewData["Title"] = "Create Ticket";
+    ViewData["ActiveNav"] = "Tickets";
+}
+
+<div class="panel">
+    <form action="@Url.Action()" method="post">
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Title</label>
+            <div class="col-sm-10">
+                @Html.TextBoxFor(a => a.Title, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Type</label>
+            <div class="col-sm-10">
+                @Html.DropDownListFor(a => a.Type, RazorHelper.GetEnumList<InStaging.Domain.Enums.TicketType>(), new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Description</label>
+            <div class="col-sm-10">
+                @Html.TextAreaFor(a => a.Description, 6, 1, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="ml-auto">
+                <button type="submit" class="btn btn-sm btn-outline-primary">Save</button>
+                <a href="@Url.Action("Index", "Ticket")" class="btn btn-sm btn-outline-secondary">Back</a>
+            </div>
+        </div>
+    </form>
+</div>

@@ -3,41 +3,38 @@ using InStaging.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace InStaging.Logic
 {
-    public class TicketLogic : BaseLogic
+    public class ApplicationLogic : BaseLogic
     {
-        public TicketLogic(IUnitOfWork uow) : base(uow)
+        public ApplicationLogic(IUnitOfWork uow) : base(uow)
         {
-
         }
 
-        public List<Ticket> GetActiveTickets()
+
+        public List<Application> GetActiveApplications()
         {
             var model = Uow.DataService
-                .Tickets
+                .Applications
                 .Where(a => a.Archived == false)
-                .Where(a => a.Status != Domain.Enums.TicketStatus.Complete)
                 .ToList();
 
             return model;
         }
 
-        public void CreateTicket(Ticket ticket)
+        public void CreateApplication(Application app)
         {
             try
             {
-                Uow.DataService.Tickets.Add(ticket);
+                Uow.DataService.Applications.Add(app);
                 Uow.DataService.SaveChanges();
             }
             catch (Exception e)
             {
                 throw e;
             }
-            
         }
     }
 }

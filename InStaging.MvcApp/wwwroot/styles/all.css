@@ -36,10 +36,9 @@
     .layout-container .layout-sidebar ul li {
       color: white; }
       .layout-container .layout-sidebar ul li a {
-        padding-left: 16px;
         background-color: #495057;
-        border-bottom: solid 1px rgba(0, 0, 0, 0.1);
         padding: 6px;
+        padding-left: 16px;
         display: block;
         color: white; }
         .layout-container .layout-sidebar ul li a:hover {
@@ -61,3 +60,5 @@
 .panel {
   background-color: white;
   padding: 15px; }
+  .panel .panel-row {
+    padding: 0px 8px; }

@@ -17,11 +17,10 @@ namespace InStaging.MvcApp.Controllers
 
         public IActionResult Index()
         {
-            var model = new TicketIndexVM();
-
             var ticketLogic = new TicketLogic(Uow);
-            var activeTickets = ticketLogic.GetActiveTickets();
-            return View();
+            var model = new TicketIndexVM();
+            model.ActiveTickets = ticketLogic.GetActiveTickets();
+            return View(model);
         }
 
         [HttpGet]
@@ -33,6 +32,24 @@ namespace InStaging.MvcApp.Controllers
         [HttpPost]
         public IActionResult Add(TicketAddVM model)
         {
+            if (ModelState.IsValid)
+            {
+                var tLogic = new TicketLogic(Uow);
+
+                var ticket = new Domain.Ticket();
+                ticket.DateCreated = DateTime.Now;
+                ticket.Archived = false;
+                ticket.Description = model.Description;
+                ticket.Status = Domain.Enums.TicketStatus.Backlog;
+                ticket.Title = model.Title;
+                ticket.Type = model.Type;
+
+                tLogic.CreateTicket(ticket);
+
+                return RedirectToAction("Index");
+            }
+
+
             return View(model);
         }
 

@@ -7,9 +7,10 @@ namespace InStaging.Domain
     public class Ticket 
     {
         public Guid Id { get; set; }
+        public DateTime DateCreated { get; set; }
         public bool Archived { get; set; }
 
-        public string Descriptions { get; set; }
+        public string Description { get; set; }
         public string Title { get; set; }
 
         public Enums.TicketStatus Status { get; set; }

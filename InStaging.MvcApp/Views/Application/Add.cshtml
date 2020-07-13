@@ -1,0 +1,23 @@
+﻿@model InStaging.MvcApp.Models.ApplicationAddVM
+
+@{
+    ViewData["Title"] = "Create Application";
+    ViewData["ActiveNav"] = "Application";
+}
+
+<div class="panel">
+    <form action="@Url.Action()" method="post">
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+                @Html.TextBoxFor(a => a.Name, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="ml-auto">
+                <button type="submit" class="btn btn-sm btn-outline-primary">Save</button>
+                <a href="@Url.Action("Index", "Application")" class="btn btn-sm btn-outline-secondary">Back</a>
+            </div>
+        </div>
+    </form>
+</div>

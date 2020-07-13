@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace InStaging.MvcApp.Models
 {
-    public class TicketIndexVM
+    public class ApplicationIndexVM
     {
-        public List<Ticket> ActiveTickets { get; internal set; }
+        public List<Application> Applications { get; set; }
     }
 }

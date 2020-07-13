@@ -7,5 +7,8 @@ namespace InStaging.MvcApp.Models
 {
     public class TicketAddVM
     {
+        public string Description { get; set; }
+        public string Title { get; set; }
+        public Domain.Enums.TicketType Type { get; set; }
     }
 }

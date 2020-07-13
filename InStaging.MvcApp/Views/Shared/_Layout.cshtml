@@ -1,11 +1,13 @@
 ﻿@using InStaging.MvcApp.Helper
-
+@{
+    var applogic = new InStaging.Logic.ApplicationLogic(Uow);
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>InStaging | @ViewBag.Title</title>
+    <title>InStaging | @ViewData["Title"]</title>
     <link href="~/styles/font-awesome.css" rel="stylesheet" />
     <link href="~/styles/bootstrap.css" rel="stylesheet" />
     <link href="~/styles/all.css" rel="stylesheet" />
@@ -14,19 +16,29 @@
 
     <div class="layout-container">
         <div class="layout-sidebar">
-            <a class="sidebar-logo"><h2 class="text-white text-center text-uppercase">In Staging</h2></a>
+
+            <a class="sidebar-logo"></a>
+
+            <div class="p-3">
+                <select class="form-control" onchange="SetAppContext">
+                    @foreach (var app in applogic.GetActiveApplications())
+                    {
+                        <option value="@app.Id">@app.Name</option>
+                    }
+                </select>
+            </div>
             <ul>
                 <li class=""><a href="">User Profile</a></li>
             </ul>
             <hr />
             <ul>
-                <li class="@RazorHelper.GetActiveString(ViewBag.ActiveNav, "Inbox")"><a href="">Inbox</a></li>
-                <li class="@RazorHelper.GetActiveString(ViewBag.ActiveNav, "Tickets")"><a href="@Url.Action("Index", "Ticket")">Tickets</a></li>
+                <li class="@RazorHelper.GetActiveString((string)ViewData["ActiveNav"], "Inbox")"><a href="">Inbox</a></li>
+                <li class="@RazorHelper.GetActiveString((string)ViewData["ActiveNav"], "Tickets")"><a href="@Url.Action("Index", "Ticket")">Tickets</a></li>
                 <li class="">
                     <a>Admin</a>
                     <ul>
-                        <li class="@RazorHelper.GetActiveString(ViewBag.ActiveNav, "Settings")"><a href="">Settings</a></li>
-                        <li class="@RazorHelper.GetActiveString(ViewBag.ActiveNav, "Other Settings")"><a href="">Other Settings</a></li>
+                        <li class="@RazorHelper.GetActiveString((string)ViewData["ActiveNav"], "Applications")"><a href="@Url.Action("Index", "Application")">Applications</a></li>
+                        <li class="@RazorHelper.GetActiveString((string)ViewData["ActiveNav"], "Settings")"><a href="">Settings</a></li>
                     </ul>
                 </li>
 
@@ -38,9 +50,15 @@
         </div>
         <div class="layout-content">
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                <a class="navbar-brand">@ViewBag.Title</a>
+                <a class="navbar-brand"><b>In Staging </b>| @ViewBag.Title</a>
                 @RenderSection("navbar", required: false)
             </nav>
+            @if (IsSectionDefined("breadcrumb"))
+            {
+                <nav class="navbar navbar-expand navbar-light bg-white">
+                    @RenderSection("breadcrumb", required: false)
+                </nav>
+            }
             <div class="p-3">
                 @RenderBody()
             </div>
@@ -51,10 +69,17 @@
         </div>
     </div>
 
+
     <script src="~/libraries/jquery/dist/jquery.js"></script>
     <script src="~/libraries/bootstrap/dist/js/bootstrap.js"></script>
 
+    <script>
+        function SetAppContext() {
 
+        }
+
+
+    </script>
 
     @RenderSection("Scripts", required: false)
 </body>
